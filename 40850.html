@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web A11y Tracker | Exception Form</title>
+    <link type="text/css" rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./ontario-design-system-dist-1.8.0/favicons/favicon-48x48.png" type="image/x-icon">
+</head>
+<body>
+
+<div class='documentation-only--application'>
+    <div class='ontario-header__container'>
+        <header class='ontario-application-header ontario-header' id='ontario-header'>
+            <div class='ontario-row'>
+                <div class='ontario-columns ontario-small-6 ontario-application-header__logo'>
+                    <a href='https://www.ontario.ca/page/government-ontario'>
+                        <img src='./ontario-design-system-dist-1.8.0/logos/ontario-logo--desktop.svg' alt='Ontario.ca homepage' role='img' />
+                    </a>
+                </div>
+                <div class='ontario-columns ontario-small-6 ontario-application-header__lang-toggle'>
+                    <a href='#' class='ontario-header__language-toggler ontario-header-button ontario-header-button--without-outline'>
+                        Français
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class='ontario-application-subheader-menu__container'>
+            <section class='ontario-application-subheader'>
+                <div class='ontario-row'>
+                    <div class='ontario-columns ontario-small-12 ontario-application-subheader__container'>
+                        <p class='ontario-application-subheader__heading'>
+                            <a href='#'>Web A11y Tracker</a>
+                        </p>
+                        <div class='ontario-application-subheader__menu-container'>
+                            <ul class='ontario-application-subheader__menu ontario-show-for-large'>
+                                <li><a href='#'>Link 1</a></li>
+                                <li><a href='#'>Link 2</a></li>
+                            </ul>
+                            <button
+                                class='ontario-header__menu-toggler ontario-header-button ontario-header-button--with-outline'
+                                id='ontario-header-menu-toggler'
+                                aria-controls='ontario-navigation'
+                                aria-label='Show navigation menu'
+                                type='button'
+                            >
+                                <svg class='ontario-icon' focusable='false' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid meet'>
+                                    <use xlink:href='./ontario-design-system-dist-1.8.0/icons/ontario-icons-primary.svg#ontario-icon-menu' id="ontario-header-menu-icon"></use>
+                                </svg>
+                                <span>Menu</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <nav class="ontario-navigation" id="ontario-navigation">
+                <button
+                    class="ontario-header__menu-toggler ontario-header-button ontario-header-button--with-outline"
+                    id="ontario-header-nav-toggler"
+                    aria-controls="ontario-navigation"
+                    aria-label="Hide navigation menu"
+                >
+                    <svg
+                        class="ontario-icon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                        preserveAspectRatio="xMidYMid meet"
+                    >
+                        <use xlink:href="#ontario-icon-close"></use>
+                    </svg>
+                    <span>Menu</span>
+                </button>
+                <div class="ontario-navigation__container">
+                    <ul>
+                        <li class="ontario-show-for-small-only"><a
+                                href="#">Link
+                                1</a></li>
+                        <li class="ontario-show-for-small-only"><a
+                                href="#">Link
+                                2</a></li>
+                        <li class="ontario-hide-for-large"><a href="#">Link
+                                3</a></li>
+                        <li class="ontario-hide-for-large"><a href="#">Link
+                                4</a></li>
+                        <li class="ontario-hide-for-large"><a href="#">Link
+                                5</a></li>
+                        <li><a href="#">Link 6</a></li>
+                        <li><a href="#">Link 7</a></li>
+                        <li><a href="#">Link 8</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class='ontario-overlay'></div>
+</div>
+
+
+<h1 class="ontario-label">
+    <label class="ontario-label ontario-label--heading" for="heading-label-example">
+        Web Compliance Exception Form - WebA11y Tracker
+    </label>
+</h1>
+
+<h1>Ministry Determination</h1>
+
+<div class="ontario-alert ontario-alert--informational">
+    <div class="ontario-alert__header">
+        <div class="ontario-alert__header-icon">
+            <svg class="ontario-icon" alt="" aria-hidden="true" focusable="false" sol:category="primary" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" ><use href="ontario-design-system-dist-1.8.0/icons/ontario-icons-primary.svg#ontario-icon-alert-information"></use></svg>
+        </div>
+        <h2 class="ontario-alert__header-title ontario-h4">Exceptions</h2>
+    </div>
+
+    <div class="ontario-alert__body">
+        
+        <p class="desc">
+            <b>1.1.1 Non-Test Content</b>
+            <br>
+            <b>Reason:</b> Unconvertible 
+            <br>
+            <b>Explanation:</b> Test test test
+        </p>
+
+        <p class="desc">
+            <b>1.3.1 Orientation</b>
+            <br>
+            <b>Reason:</b> Outside our control 
+            <br>
+            <b>Explanation:</b> Test test test
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- <ul class="ontario-card__container ontario-card--cards-per-row-2">
+    <li class="ontario-card ontario-card--no-image ontario-card--position-horizontal">
+        <div class="ontario-card__text-container">
+            <h2 class="ontario-card__heading">
+                1.1.1 Non-Test Content
+            </h2>
+            <div class="ontario-card__description">
+                <p class="desc">
+                    <b>Reason:</b> Unconvertible 
+                    <br>
+                    <b>Explanation:</b> Test test test
+                </p>
+            </div>
+        </div>
+    </li>
+
+    <li class="ontario-card ontario-card--no-image ontario-card--position-horizontal">
+        <div class="ontario-card__text-container">
+            <h2 class="ontario-card__heading">
+                1.3.1 Orientation
+            </h2>
+            <div class="ontario-card__description">
+                <p class="desc">
+                    <b>Reason:</b> Outside our control 
+                    <br>
+                    <b>Explanation:</b> Test test test
+                </p>
+            </div>
+        </div>
+    </li>
+
+</ul> -->
+
+
+<div class="ontario-form-group">
+    <fieldset class="ontario-fieldset" >
+        <legend class="ontario-fieldset__legend">
+            Mitigation Efforts
+            <br>
+            (What actions are you undertaking to assess or mitigate the risk and/or impact of non-compliance with the IASR?)*
+            <span class="ontario-label__flag">
+                (required)
+            </span>
+        </legend>
+        <div class="ontario-checkboxes">
+                <div class="ontario-checkboxes__item">
+                    <input class="ontario-checkboxes__input" id="checkbox-option-1" name="options"
+                        type="checkbox" value="option-1">
+                    <label class="ontario-checkboxes__label" for="checkbox-option-1">
+                        Offered alternative formats and communication supports
+                    </label>
+                </div>
+                <div class="ontario-checkboxes__item">
+                    <input class="ontario-checkboxes__input" id="checkbox-option-2" name="options"
+                        type="checkbox" value="option-2">
+                    <label class="ontario-checkboxes__label" for="checkbox-option-2">
+                        Prepared summary of inaccessible information
+                    </label>
+                </div>
+                <div class="ontario-checkboxes__item">
+                    <input class="ontario-checkboxes__input" id="checkbox-option-3" name="options"
+                        type="checkbox" value="option-3">
+                    <label class="ontario-checkboxes__label" for="checkbox-option-3">
+                        Sought or researched accessible requirements
+                    </label>
+                </div>
+                <div class="ontario-checkboxes__item">
+                    <input class="ontario-checkboxes__input" id="checkbox-option-1" name="options"
+                        type="checkbox" value="option-1">
+                    <label class="ontario-checkboxes__label" for="checkbox-option-1">
+                        Informed vendor of accessibility requirements
+                    </label>
+                </div>
+                <div class="ontario-checkboxes__item">
+                    <input class="ontario-checkboxes__input" id="checkbox-option-2" name="options"
+                        type="checkbox" value="option-2">
+                    <label class="ontario-checkboxes__label" for="checkbox-option-2">
+                        Prepared business case for eventual upgrade
+                    </label>
+                </div>
+                <div class="ontario-checkboxes__item">
+                    <input class="ontario-checkboxes__input" id="checkbox-option-3" name="options"
+                        type="checkbox" value="option-3">
+                    <label class="ontario-checkboxes__label" for="checkbox-option-3">
+                        Prepared web remediation plan
+                    </label>
+                </div>
+                <div class="ontario-checkboxes__item">
+                    <input class="ontario-checkboxes__input" id="checkbox-option-1" name="options"
+                        type="checkbox" value="option-1">
+                    <label class="ontario-checkboxes__label" for="checkbox-option-1">
+                        Consulted with users with disabilities
+                    </label>
+                </div>
+                <div class="ontario-checkboxes__item">
+                    <input class="ontario-checkboxes__input" id="checkbox-option-2" name="options"
+                        type="checkbox" value="option-2">
+                    <label class="ontario-checkboxes__label" for="checkbox-option-2">
+                        Sought legal advice
+                    </label>
+                </div>
+
+
+                <div class="ontario-checkboxes__item">
+                    <input class="ontario-checkboxes__input" id="checkbox-option-other" name="options"
+                        type="checkbox" value="option-other">
+                    <label class="ontario-checkboxes__label" for="checkbox-option-other">
+                        Other
+                    </label>
+                </div>
+
+                <div class="ontario-checkboxes__item other" id="other-input-container" style="display: none;">
+                    <input class="ontario-input" id="checkbox-option-other-text" name="options"
+                        type="text" placeholder="Please specify (required)">
+                </div>
+
+
+                <div class="ontario-checkboxes__item">
+                    <input class="ontario-checkboxes__input" id="checkbox-option-2" name="options"
+                        type="checkbox" value="option-2">
+                    <label class="ontario-checkboxes__label" for="checkbox-option-2">
+                        N/A
+                    </label>
+                </div>
+        </div>
+    </fieldset>
+
+    <div class="ontario-form-group">
+        <label class="ontario-label" for="text-area-example">
+            Explanation<span class="ontario-label__flag">(required)</span>
+        </label>
+        <textarea class="ontario-input ontario-textarea"  name="text-area-example" id="text-area-example"></textarea>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+
+<footer class='ontario-footer ontario-footer--default'>
+    <div class='ontario-row'>
+        <div class='ontario-columns ontario-small-12'>
+            <ul class='ontario-footer__links-container ontario-footer__links-container--inline'>
+                <li><a class='ontario-footer__link' href='https://www.ontario.ca/page/accessibility'>Accessibility</a></li>
+                <li><a class='ontario-footer__link' href='https://www.ontario.ca/page/privacy-statement'>Privacy</a></li>
+                <li><a class='ontario-footer__link' href='#'>Contact us</a></li>
+            </ul>
+            <div class='ontario-footer__copyright'>
+                <a class='ontario-footer__link' href='https://www.ontario.ca/page/copyright-information'>&copy; King's Printer for Ontario,
+                    <span class='ontario-nbsp'>2012&ndash;24</span></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src='../../scripts/ontario-a11y.js'></script>
+<script src='../../scripts/ontario-header.js'></script>
+
+
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const otherCheckbox = document.getElementById('checkbox-option-other');
+        const otherInputContainer = document.getElementById('other-input-container');
+
+        otherCheckbox.addEventListener('change', () => {
+            if (otherCheckbox.checked) {
+                otherInputContainer.style.display = 'block';
+            } else {
+                otherInputContainer.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+
+</html>
+
+

@@ -1,0 +1,264 @@
+@import 'ontario-design-system-dist-1.8.0/styles/ds-theme.min.css';
+
+
+.ontario-input, 
+.ontario-hint, 
+.ontario-label, 
+.ontario-button.ontario-button--secondary,
+a.back-to-manage,
+.ontario-fieldset,
+.ontario-summary-list{
+  margin-left: 40px ;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid #a0a0a0;
+  margin: 40px;
+  margin-top: 70px;
+  margin-bottom: 60px;
+  padding: 0;
+}
+
+.ontario-summary-list-heading__container{
+  padding-top: 20px;
+  width: 110%;
+}
+
+
+.ontario-summary-list__row{
+  width: 110%;
+}
+
+a.back-to-manage, a.back-to-home{
+  margin-left: 40px;
+  color:#06c;
+  font-weight: bold;
+}
+
+.ontario-search__submit {
+  margin-left: 100px;
+}
+
+.ontario-input.ontario-search__input{
+  width: 504px;
+}
+
+.ontario-label.ontario-label--heading{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.ontario-header__container{
+  margin-bottom: 30px;
+}
+
+.ontario-button.ontario-button--secondary, .ontario-button.ontario-button--primary{
+  margin-top: 10px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  margin-right: 10px;
+}
+
+.ontario-search__container{
+  margin-top: 20px;
+}
+
+.ontario-card.ontario-card--no-image.ontario-card--position-horizontal{
+  width: 40%;
+  margin-left: 40px;
+  margin-right: 20px;
+}
+
+.ontario-card__delete-button {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.ontario-card__delete-button svg {
+  width: 24px;
+  height: 24px;
+  fill: #000;
+  transition: fill 0.2s;
+}
+
+.ontario-card__delete-button:hover svg {
+  fill: #06c;
+}
+
+.ontario-card__text-container {
+  position: relative;
+}
+
+a.null{
+  color: white;
+}
+
+.ontario-input.ontario-dropdown.role{
+  width: 20%;
+}
+
+.ontario-button.ontario-button--primary.submit{
+  position: relative;
+  top: 30px;
+  margin-top: 30px;
+}
+
+.success-container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  margin-top: 400px;
+  margin-left: 0px;
+  margin-bottom: -240px;
+}
+
+.content{
+  text-align: center;
+}
+
+.ontario-icon.check {
+  width: 100px;
+  height: 100px;
+}
+
+.ontario-alert.ontario-alert--warning{
+  margin-left: 40px;
+  width: 60%;
+}
+
+
+h1, h5{
+  margin-left: 40px;
+}
+
+h1{
+  font-size: 33px;
+}
+
+.h4{
+padding-left: -20px;
+}
+
+p{
+  margin-left: 40px;
+  font-size: 20px;
+}
+
+p.desc{
+  margin-left: 0px;
+  font-size: 18px;
+}
+
+.instructions-container {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.instructions{
+  width: 90%;
+}
+
+.ontario-button.continue {
+  position: absolute;
+  bottom: 10;
+  right: 5%;
+  margin: 30px;
+  width: 20%;
+}
+
+.ontario-fieldset{
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.title{
+  margin-left: 0px;
+}
+
+.ontario-alert.ontario-alert--informational{
+  width: 50%;
+  margin-left: 40px;
+}
+
+.ontario-checkboxes__item.other{
+  margin-left: -70px;
+}
+
+.ontario-label.supdoc{
+  padding-top: 10px;
+}
+
+.docs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.4) 0rem 0.1875rem 0.5rem 0.0625rem;
+  border-radius: 4px;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  cursor:auto;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.docs:hover {
+  transform: scale(1.001); 
+  box-shadow: rgba(0, 0, 0, 0.4) 0rem 0.375rem 1rem 0.125rem;
+}
+
+.ontario-button.add, 
+.ontario-button.choose, 
+.ontario-button.preview,
+.ontario-button.delete-btn {
+  font-size: 14px;
+  margin-top: 0px;
+  margin-left: 50px;
+}
+
+.ontario-button.choose{
+  margin-left: 0px;
+}
+
+.ontario-button.add {
+  margin: 20px;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.ontario-button.delete-btn{
+  border-color: red;
+  color: red;
+}
+
+.ontario-button.delete-btn:hover{
+  background-color: rgb(252, 239, 239);
+}
+
+.attachment {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.delete-btn {
+  cursor: pointer;
+}
+
+a.weblink:link{
+  color: #06c;
+}
+
+a.weblink:visited{
+  color: #06c;
+}
+
+

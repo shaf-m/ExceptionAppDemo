@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Applications and Team</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./ontario-design-system-dist-1.8.0/favicons/favicon-48x48.png" type="image/x-icon">
+</head>
+<body>
+
+<div class="documentation-only--application">
+    <div class="ontario-header__container">
+        <header class="ontario-application-header ontario-header">
+            <div class="ontario-row">
+                <div class="ontario-columns ontario-small-6 ontario-application-header__logo">
+                    <a href="https://www.ontario.ca/page/government-ontario">
+                        <img src="./ontario-design-system-dist-1.8.0/logos/ontario-logo--desktop.svg" alt="Ontario.ca homepage" role="img">
+                    </a>
+                </div>
+                <div class="ontario-columns ontario-small-6 ontario-application-header__lang-toggle">
+                    <a href="#" class="ontario-header__language-toggler ontario-header-button ontario-header-button--without-outline">Français</a>
+                </div>
+            </div>
+        </header>
+        <div class="ontario-application-subheader-menu__container">
+            <section class="ontario-application-subheader">
+                <div class="ontario-row">
+                    <div class="ontario-columns ontario-small-12 ontario-application-subheader__container">
+                        <p class="ontario-application-subheader__heading">
+                            <a href="#">Web A11y Tracker</a>
+                        </p>
+                        <div class="ontario-application-subheader__menu-container">
+                            <ul class="ontario-application-subheader__menu ontario-show-for-large">
+                                <li><a href="#">Link 1</a></li>
+                                <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Link 3</a></li>
+                                <li><a href="#">Link 4</a></li>
+                                <li><a href="#">Link 5</a></li>
+                            </ul>
+                            <ul class="ontario-application-subheader__menu ontario-hide-for-small ontario-show-for-medium ontario-hide-for-large">
+                                <li><a href="#">Link 1</a></li>
+                                <li><a href="#">Link 2</a></li>
+                            </ul>
+                            <button class="ontario-header__menu-toggler ontario-header-button ontario-header-button--with-outline"
+                                    id="ontario-header-menu-toggler" aria-controls="ontario-navigation" aria-label="Show navigation menu" type="button">
+                                <svg class="ontario-icon" focusable="false" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
+                                    <use xlink:href="./ontario-design-system-dist-1.8.0/icons/ontario-icons-primary.svg#ontario-icon-menu" id="ontario-header-menu-icon"></use>
+                                </svg>
+                                <span>Menu</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <nav class="ontario-navigation" id="ontario-navigation">
+                <button class="ontario-header__menu-toggler ontario-header-button ontario-header-button--with-outline"
+                        id="ontario-header-nav-toggler" aria-controls="ontario-navigation" aria-label="Hide navigation menu">
+                    <svg class="ontario-icon" focusable="false" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
+                        <use xlink:href="#ontario-icon-close"></use>
+                    </svg>
+                    <span>Menu</span>
+                </button>
+                <div class="ontario-navigation__container">
+                    <ul>
+                        <li class="ontario-show-for-small-only"><a href="#">Link 1</a></li>
+                        <li class="ontario-show-for-small-only"><a href="#">Link 2</a></li>
+                        <li class="ontario-hide-for-large"><a href="#">Link 3</a></li>
+                        <li class="ontario-hide-for-large"><a href="#">Link 4</a></li>
+                        <li class="ontario-hide-for-large"><a href="#">Link 5</a></li>
+                        <li><a href="#">Link 6</a></li>
+                        <li><a href="#">Link 7</a></li>
+                        <li><a href="#">Link 8</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="ontario-overlay"></div>
+</div>
+
+<h6>
+    <a href="" class="back-to-home">&lt; Back to Home</a>
+</h6>
+
+<h1 class="ontario-label">
+    <label class="ontario-label ontario-label--heading" for="heading-label-example">Manage Applications and Team</label>
+</h1>
+
+<a href="./create-new-app.html" class="null">
+    <button class="ontario-button ontario-button--primary">Create new application</button>
+</a>
+
+<button class="ontario-button ontario-button--secondary">Manage reviewer group</button>
+
+<form id="search-app" class="ontario-search__container" novalidate>
+    <label class="ontario-label ontario-search__label" for="search-example-2">Search for an existing application</label>
+    <div class="ontario-search__input-container">
+        <input type="search" id="search-example-2" autocomplete="off" aria-autocomplete="none" class="ontario-input ontario-search__input" required>
+        <input class="ontario-search__reset" id="search-example-2-reset-button" type="reset" value="" aria-label="Clear field">
+        <button class="ontario-search__submit" id="search-example-2-submit-button" type="submit" onclick="handleSearch()">
+            <span class="ontario-show-for-sr">Submit</span>
+            <svg class="ontario-icon" focusable="false" sol:category="primary" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
+                <use xlink:href="./ontario-design-system-dist-1.8.0/icons/ontario-icons-primary.svg#ontario-icon-search"></use>
+            </svg>
+        </button>
+    </div>
+</form>
+
+<ul class="ontario-card__container ontario-card--cards-per-row-2">
+    <li class="ontario-card ontario-card--no-image ontario-card--position-horizontal">
+        <div class="ontario-card__text-container">
+            <h2 class="ontario-card__heading"><a href="#">Digital Forms</a></h2>
+            <div class="ontario-card__description">
+                <p class="desc">Ministry: MCCSS<br>Cluster: CYSSC</p>
+            </div>
+        </div>
+    </li>
+    <li class="ontario-card ontario-card--no-image ontario-card--position-horizontal">
+        <div class="ontario-card__text-container">
+            <h2 class="ontario-card__heading"><a href="#">Web Ally</a></h2>
+            <div class="ontario-card__description">
+                <p class="desc">Ministry: MCCSS<br>Cluster: CYSSC</p>
+            </div>
+        </div>
+    </li>
+</ul>
+
+<footer class="ontario-footer ontario-footer--default">
+    <div class="ontario-row">
+        <div class="ontario-columns ontario-small-12">
+            <ul class="ontario-footer__links-container ontario-footer__links-container--inline">
+                <li><a class="ontario-footer__link" href="https://www.ontario.ca/page/accessibility">Accessibility</a></li>
+                <li><a class="ontario-footer__link" href="https://www.ontario.ca/page/privacy-statement">Privacy</a></li>
+                <li><a class="ontario-footer__link" href="#">Contact us</a></li>
+            </ul>
+            <div class="ontario-footer__copyright">
+                <a class="ontario-footer__link" href="https://www.ontario.ca/page/copyright-information">&copy; King's Printer for Ontario,
+                    <span class="ontario-nbsp">2012–24</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    window.addEventListener('load', () => {
+        addSearchResetOnClickListener('search-example-2-reset-button', 'search-example-2');
+        addResetButtonOnSearchInputListener('search-example-2-reset-button', 'search-example-2');
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submitted</title>
+    <link type="text/css" rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./ontario-design-system-dist-1.8.0/favicons/favicon-48x48.png" type="image/x-icon">
+</head>
+<body>
+
+<div class='documentation-only--application'>
+    <div class='ontario-header__container'>
+        <header class='ontario-application-header ontario-header' id='ontario-header'>
+            <div class='ontario-row'>
+                <div class='ontario-columns ontario-small-6 ontario-application-header__logo'>
+                    <a href='https://www.ontario.ca/page/government-ontario'>
+                        <img src='./ontario-design-system-dist-1.8.0/logos/ontario-logo--desktop.svg' alt='Ontario.ca homepage' role='img' />
+                    </a>
+                </div>
+                <div class='ontario-columns ontario-small-6 ontario-application-header__lang-toggle'>
+                    <a href='#' class='ontario-header__language-toggler ontario-header-button ontario-header-button--without-outline'>
+                        Français
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class='ontario-application-subheader-menu__container'>
+            <section class='ontario-application-subheader'>
+                <div class='ontario-row'>
+                    <div class='ontario-columns ontario-small-12 ontario-application-subheader__container'>
+                        <p class='ontario-application-subheader__heading'>
+                            <a href='#'>Web A11y Tracker</a>
+                        </p>
+                        <div class='ontario-application-subheader__menu-container'>
+                            <ul class='ontario-application-subheader__menu ontario-show-for-large'>
+                                <li><a href='#'>Link 1</a></li>
+                                <li><a href='#'>Link 2</a></li>
+                                <li><a href='#'>Link 3</a></li>
+                                <li><a href='#'>Link 4</a></li>
+                                <li><a href='#'>Link 5</a></li>
+                            </ul>
+                            <ul class='ontario-application-subheader__menu ontario-hide-for-small ontario-show-for-medium ontario-hide-for-large'>
+                                <li><a href='#'>Link 1</a></li>
+                                <li><a href='#'>Link 2</a></li>
+                            </ul>
+                            <button
+                                class='ontario-header__menu-toggler ontario-header-button ontario-header-button--with-outline'
+                                id='ontario-header-menu-toggler'
+                                aria-controls='ontario-navigation'
+                                aria-label='Show navigation menu'
+                                type='button'
+                            >
+                                <svg class='ontario-icon' focusable='false' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid meet'>
+                                    <use xlink:href='./ontario-design-system-dist-1.8.0/icons/ontario-icons-primary.svg#ontario-icon-menu' id="ontario-header-menu-icon"></use>
+                                </svg>
+                                <span>Menu</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <nav class="ontario-navigation" id="ontario-navigation">
+                <button
+                    class="ontario-header__menu-toggler ontario-header-button ontario-header-button--with-outline"
+                    id="ontario-header-nav-toggler"
+                    aria-controls="ontario-navigation"
+                    aria-label="Hide navigation menu"
+                >
+                    <svg
+                        class="ontario-icon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                        preserveAspectRatio="xMidYMid meet"
+                    >
+                        <use xlink:href="#ontario-icon-close"></use>
+                    </svg>
+                    <span>Menu</span>
+                </button>
+                <div class="ontario-navigation__container">
+                    <ul>
+                        <li class="ontario-show-for-small-only"><a
+                                href="#">Link
+                                1</a></li>
+                        <li class="ontario-show-for-small-only"><a
+                                href="#">Link
+                                2</a></li>
+                        <li class="ontario-hide-for-large"><a href="#">Link
+                                3</a></li>
+                        <li class="ontario-hide-for-large"><a href="#">Link
+                                4</a></li>
+                        <li class="ontario-hide-for-large"><a href="#">Link
+                                5</a></li>
+                        <li><a href="#">Link 6</a></li>
+                        <li><a href="#">Link 7</a></li>
+                        <li><a href="#">Link 8</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class='ontario-overlay'></div>
+</div>
+
+<div class="success-container">
+    <div class="content">
+        <h1 class="msg">Application Submitted Successfully!</h1>
+        <svg class="ontario-icon check" focusable="false" viewBox="0 0 50 50" sol:category="primary" preserveAspectRatio="xMidYMid meet">
+            <use xlink:href="ontario-design-system-dist-1.8.0/icons/ontario-icons-primary.svg#ontario-icon-alert-success"></use>
+        </svg>
+    </div>
+</div>
+
+</body>
+
+<footer class='ontario-footer ontario-footer--default'>
+    <div class='ontario-row'>
+        <div class='ontario-columns ontario-small-12'>
+            <ul class='ontario-footer__links-container ontario-footer__links-container--inline'>
+                <li><a class='ontario-footer__link' href='https://www.ontario.ca/page/accessibility'>Accessibility</a></li>
+                <li><a class='ontario-footer__link' href='https://www.ontario.ca/page/privacy-statement'>Privacy</a></li>
+                <li><a class='ontario-footer__link' href='#'>Contact us</a></li>
+            </ul>
+            <div class='ontario-footer__copyright'>
+                <a class='ontario-footer__link' href='https://www.ontario.ca/page/copyright-information'>&copy; King's Printer for Ontario,
+                    <span class='ontario-nbsp'>2012&ndash;24</span></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src='../../scripts/ontario-a11y.js'></script>
+<script src='../../scripts/ontario-header.js'></script>
+
+<script>
+    window.addEventListener('load', () => {
+        addSearchResetOnClickListener('search-example-2-reset-button', 'search-example-2');
+        addResetButtonOnSearchInputListener('search-example-2-reset-button', 'search-example-2');
+    });
+</script>
+
+</html>
+
+
