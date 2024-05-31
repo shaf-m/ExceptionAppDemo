@@ -2,12 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Web A11y Tracker | Instructions</title>
+    <title>Web A11y Tracker | Approval Workflow</title>
     <link type="text/css" rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./ontario-design-system-dist-1.8.0/favicons/favicon-48x48.png" type="image/x-icon">
 </head>
-
-
 
 
 <div class='documentation-only--application'>
@@ -99,10 +97,9 @@
 
 
 <body>
-    <div id="app">
-        <h1 class="workflow-title">Approval Workflow</h1>
-        
-        <!-- Move the input fields and "Add Approver" button here -->
+    <h1 class="workflow-title">Approval Workflow</h1>
+
+    <div id="app">        
         <div class="ontario-form-group fields">
             <label class="ontario-label approver-name">
                 Name
@@ -143,9 +140,8 @@
 
         <button class="ontario-button ontario-button--primary approver" id="addApproverBtn">Add Approver</button>
 
-
-        <!-- Approvers will be dynamically added here -->
         <div id="approvers"></div>
+
     </div>
 
 <footer class='ontario-footer ontario-footer--default'>
@@ -172,14 +168,13 @@ document.addEventListener("DOMContentLoaded", function() {
     let approverCount = 0;
 
     addApproverBtn.addEventListener("click", function() {
-        // Retrieve values from input fields
+
         const name = document.getElementById("nameInput").value;
         const email = document.getElementById("emailInput").value;
         const role = document.getElementById("roleInput").value;
         const apprev = document.getElementById("apprevInput").value;
         const delegate = document.getElementById("delegateInput").value;
         
-        // Do something with the name and email (e.g., add to the list of approvers)
         approverCount++;
         const approverDiv = document.createElement("div");
         approverDiv.className = "approver";
@@ -202,20 +197,17 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
         approversDiv.appendChild(approverDiv);
 
-        // Clear input fields
         document.getElementById("nameInput").value = '';
         document.getElementById("emailInput").value = '';
         document.getElementById("roleInput").value = '';
         document.getElementById("apprevInput").value = '';
         document.getElementById("delegateInput").value = '';
 
-        // Apply predefined button styles to the buttons
         const buttons = approverDiv.querySelectorAll(".buttons button");
         buttons.forEach(button => {
             button.classList.add("ontario-button", "ontario-button--secondary", "inner-btn");
         });
 
-        // Add event listeners for the buttons
         const removeBtn = approverDiv.querySelector(".removeBtn");
         const moveUpBtn = approverDiv.querySelector(".moveUpBtn");
         const moveDownBtn = approverDiv.querySelector(".moveDownBtn");
@@ -243,13 +235,17 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     function updateIndicators() {
-        const approvers = document.querySelectorAll(".approver");
-        approvers.forEach((approver, index) => {
-            approver.querySelector(".indicator").textContent = index + 1;
-        });
-    }
-});
+    const approvers = document.querySelectorAll(".approver");
+    approverCount = 0;
+    approvers.forEach((approver, index) => {
+        if (approver.parentElement === approversDiv) {
+            const indicator = approver.querySelector(".indicator");
+            indicator.textContent = ++approverCount;
+        }
+    });
+}
 
+});
 
 </script>
 
