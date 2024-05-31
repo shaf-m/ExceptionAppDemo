@@ -262,3 +262,197 @@ a.weblink:visited{
 }
 
 
+
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+#app {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1.workflow-title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#approvers {
+  margin-top: 20px;
+}
+
+.approver {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.4) 0rem 0.1875rem 0.5rem 0.0625rem;
+  border-radius: 4px;
+
+}
+
+.ontario-button.approver {
+  background-color: #06c;
+  width: 30px;
+  padding-left: 22px;
+  margin-left: -40px;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  box-shadow: none;
+}
+
+.ontario-button.approver-submit {
+  background-color: #06c;
+  width: 20px;
+  padding-left: 20px;
+  margin-left: 40px;
+  box-shadow: none;
+}
+
+.indicator {
+  font-size: 18px;
+  margin-left: 30px;
+}
+
+h6{
+  font-size: 16px;
+}
+
+.info{
+  margin-top: 20px;
+}
+
+/* h6.name{
+  margin-top: 90px;
+} */
+
+
+
+.approver .indicator {
+  width: 60px;
+  height: 60px;
+  background-color: #06c;
+  border-radius: 90%;
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  margin-left: 40px;
+  margin-right: 10px;
+}
+
+
+
+
+.approver {
+  margin-bottom: 20px;
+}
+
+.approver .info label {
+  display: block;
+}
+
+.approver .info div {
+  margin-top: 5px;
+}
+
+.approver .buttons button {
+  display: block;
+  margin-top: 5px;
+}
+
+
+
+.ontario-button.ontario-button--secondary.inner-btn{
+  margin: 20px;
+}
+
+
+
+
+
+/* Modal Styles */
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  margin-top: 10%;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto; /* Center horizontally */
+  margin-top: 10%; /* Center vertically */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 600px; /* Limit the maximum width */
+}
+
+.ontario-form-group.fields{
+  margin-left: -80px;
+}
+
+.ontario-input.approver{
+  width: 50%;
+  box-shadow: none;
+}
+
+.ontario-form-group.apprev{
+  margin-bottom: 20px;
+}
+
+.ontario-input.approver{
+  width: 50%;
+  box-shadow: none;
+}
+
+.ontario-input.approver:focus{
+  box-shadow: 0 0 0 4px #009adb;
+  outline: 4px solid transparent;
+}
+
+.ontario-label.approver-name{
+  padding-top: 40px;
+}
+
+.ontario-label.approver{
+  margin-top: 60px;
+}
+
+/* Close Button */
+.close {
+  padding-right: 20px;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
