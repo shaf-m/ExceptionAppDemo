@@ -266,137 +266,106 @@ a.weblink:visited{
 
 
 
-body {
-  font-family: Arial, sans-serif;
-}
 
-h1.workflow-title {
-  margin-top: 10px;
-  margin-bottom: -10px;
-}
 
-#approvers {
-  margin-top: 20px;
-}
 
-.approver {
-  margin-bottom: 10px;
-  padding: 10px;
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  background-color: rgb(255, 255, 255);
-  box-shadow: rgba(0, 0, 0, 0.4) 0rem 0.1875rem 0.5rem 0.0625rem;
-  border-radius: 4px;
-
+.ontario-card__container.approver-info{
   margin: 40px;
+
 }
 
-.ontario-button.approver {
-  background-color: #06c;
-  width: 30px;
-  padding-left: 22px;
-  margin-left: 40px;
-  margin-top: 40px;
-  margin-bottom: 80px;
-  box-shadow: none;
+.ontario-card{
+  width: 100%;
+  max-width: 100%;
 }
 
-.ontario-button.approver-submit {
-  background-color: #06c;
-  width: 20px;
-  padding-left: 20px;
-  margin-left: 40px;
-  box-shadow: none;
-}
 
-.indicator {
-  font-size: 18px;
-  margin-left: 30px;
-}
-
-h6{
-  font-size: 16px;
-}
-
-.info{
-  margin-top: 20px;
-}
-
-.indicator {
-  width: 60px;
-  height: 60px;
-  border-radius: 90%;
-  background-color: #06c;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-}
-
-.info {
-  flex-grow: 1;
-  margin-top: 20px;
-  margin-left: 40px;
-}
-
-.info h6 {
-  margin: 0;
-}
-
-.approver {
-  margin-bottom: 20px;
-}
-
-.approver .info label {
-  display: block;
-}
-
-.approver .info div {
-  margin-top: 5px;
-}
-
-.approver .buttons button {
-  display: block;
-  margin-top: 5px;
-}
-
-.ontario-button.ontario-button--secondary.inner-btn{
-  margin: 20px;
-}
-
-.ontario-form-group.fields{
+p.details{
+  font-size: 1rem;
   margin-left: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 400px;
 }
 
-.ontario-input.approver{
-  margin-top: 0px;
-  width: 50%;
-  box-shadow: none;
+
+.ontario-card__text-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
-.ontario-form-group.apprev{
+.ontario-card__heading{
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+
+.card-splitter{
+  display: flex;
+  flex-direction: row;
+}
+
+.card_buttons {
+  margin: 0;
+  margin-left: 50px;
+  display: flex;
+  position: relative;
+  left: 0px;
+  margin-top: 20px;
+}
+
+.move_buttons_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.ontario-button.moveDownBtn, 
+.ontario-button.moveUpBtn
+{
+
+  margin-top: 0;
+  margin-bottom: 20px;
+  margin-right: 25px;
+  margin-left: 0px;
+  font-size: 14px;
+
+}
+
+.ontario-button.moveDownBtn{
+  margin-bottom: 20px;
+
+}
+
+.ontario-button.removeBtn,
+.ontario-button.delegateBtn {
+  margin-top: 0;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  margin-right: 25px;
+  font-size: 14px;
+}
+
+
+.ontario-button.removeBtn{
+  color: red;
+  border-color: red;
   margin-bottom: 20px;
 }
 
-.ontario-input.approver{
-  width: 50%;
-  box-shadow: none;
-}
-
-.ontario-input.approver:focus{
-  box-shadow: 0 0 0 4px #009adb;
-  outline: 4px solid transparent;
+.ontario-button.removeBtn:hover{
+  background-color: rgb(252, 218, 218);
 }
 
 .ontario-label.approver-name{
-  padding-top: 40px;
+  margin-top: 50px;
 }
 
-.ontario-label.approver{
-  margin-top: 60px;
+.ontario-card:active{
+  background-color: white;
 }
+
+
+
