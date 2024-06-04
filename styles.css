@@ -270,8 +270,8 @@ a.weblink:visited{
 
 
 .ontario-card__container.approver-info{
-  margin: 40px;
-
+  margin-left: 40px;
+  margin-top: 40px;
 }
 
 .ontario-card{
