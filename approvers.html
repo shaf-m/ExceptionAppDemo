@@ -1,253 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Web A11y Tracker | Approval Workflow</title>
-    <link type="text/css" rel="stylesheet" href="./styles.css">
-    <link rel="icon" href="./ontario-design-system-dist-1.8.0/favicons/favicon-48x48.png" type="image/x-icon">
-</head>
+    <link type="text/css" rel="stylesheet" href="./styles.css" />
+    <link
+      rel="icon"
+      href="./ontario-design-system-dist-1.8.0/favicons/favicon-48x48.png"
+      type="image/x-icon"
+    />
+  </head>
 
-
-<div class='documentation-only--application'>
-    <div class='ontario-header__container'>
-        <header class='ontario-application-header ontario-header' id='ontario-header'>
-            <div class='ontario-row'>
-                <div class='ontario-columns ontario-small-6 ontario-application-header__logo'>
-                    <a href='https://www.ontario.ca/page/government-ontario'>
-                        <img src='./ontario-design-system-dist-1.8.0/logos/ontario-logo--desktop.svg' alt='Ontario.ca homepage' role='img' />
-                    </a>
-                </div>
-                <div class='ontario-columns ontario-small-6 ontario-application-header__lang-toggle'>
-                    <a href='#' class='ontario-header__language-toggler ontario-header-button ontario-header-button--without-outline'>
-                        Français
-                    </a>
-                </div>
-            </div>
-        </header>
-        <div class='ontario-application-subheader-menu__container'>
-            <section class='ontario-application-subheader'>
-                <div class='ontario-row'>
-                    <div class='ontario-columns ontario-small-12 ontario-application-subheader__container'>
-                        <p class='ontario-application-subheader__heading'>
-                            <a href='#'>Web A11y Tracker</a>
-                        </p>
-                        <div class='ontario-application-subheader__menu-container'>
-                            <ul class='ontario-application-subheader__menu ontario-show-for-large'>
-                                <li><a href='#'>Link 1</a></li>
-                                <li><a href='#'>Link 2</a></li>
-                            </ul>
-                            <button
-                                class='ontario-header__menu-toggler ontario-header-button ontario-header-button--with-outline'
-                                id='ontario-header-menu-toggler'
-                                aria-controls='ontario-navigation'
-                                aria-label='Show navigation menu'
-                                type='button'
-                            >
-                                <svg class='ontario-icon' focusable='false' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid meet'>
-                                    <use xlink:href='./ontario-design-system-dist-1.8.0/icons/ontario-icons-primary.svg#ontario-icon-menu' id="ontario-header-menu-icon"></use>
-                                </svg>
-                                <span>Menu</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <nav class="ontario-navigation" id="ontario-navigation">
-                <button
-                    class="ontario-header__menu-toggler ontario-header-button ontario-header-button--with-outline"
-                    id="ontario-header-nav-toggler"
-                    aria-controls="ontario-navigation"
-                    aria-label="Hide navigation menu"
-                >
-                    <svg
-                        class="ontario-icon"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                        preserveAspectRatio="xMidYMid meet"
-                    >
-                        <use xlink:href="#ontario-icon-close"></use>
-                    </svg>
-                    <span>Menu</span>
-                </button>
-                <div class="ontario-navigation__container">
-                    <ul>
-                        <li class="ontario-show-for-small-only"><a
-                                href="#">Link
-                                1</a></li>
-                        <li class="ontario-show-for-small-only"><a
-                                href="#">Link
-                                2</a></li>
-                        <li class="ontario-hide-for-large"><a href="#">Link
-                                3</a></li>
-                        <li class="ontario-hide-for-large"><a href="#">Link
-                                4</a></li>
-                        <li class="ontario-hide-for-large"><a href="#">Link
-                                5</a></li>
-                        <li><a href="#">Link 6</a></li>
-                        <li><a href="#">Link 7</a></li>
-                        <li><a href="#">Link 8</a></li>
-                    </ul>
-                </div>
-            </nav>
+  <div class="documentation-only--application">
+    <div class="ontario-header__container">
+      <header
+        class="ontario-application-header ontario-header"
+        id="ontario-header"
+      >
+        <div class="ontario-row">
+          <div
+            class="ontario-columns ontario-small-6 ontario-application-header__logo"
+          >
+            <a href="https://www.ontario.ca/page/government-ontario">
+              <img
+                src="./ontario-design-system-dist-1.8.0/logos/ontario-logo--desktop.svg"
+                alt="Ontario.ca homepage"
+                role="img"
+              />
+            </a>
+          </div>
+          <div
+            class="ontario-columns ontario-small-6 ontario-application-header__lang-toggle"
+          >
+            <a
+              href="#"
+              class="ontario-header__language-toggler ontario-header-button ontario-header-button--without-outline"
+            >
+              Français
+            </a>
+          </div>
         </div>
+      </header>
+      <div class="ontario-application-subheader-menu__container">
+        <section class="ontario-application-subheader">
+          <div class="ontario-row">
+            <div
+              class="ontario-columns ontario-small-12 ontario-application-subheader__container"
+            >
+              <p class="ontario-application-subheader__heading">
+                <a href="#">Web A11y Tracker</a>
+              </p>
+              <div class="ontario-application-subheader__menu-container">
+                <ul
+                  class="ontario-application-subheader__menu ontario-show-for-large"
+                >
+                  <li><a href="#">Link 1</a></li>
+                  <li><a href="#">Link 2</a></li>
+                </ul>
+                <button
+                  class="ontario-header__menu-toggler ontario-header-button ontario-header-button--with-outline"
+                  id="ontario-header-menu-toggler"
+                  aria-controls="ontario-navigation"
+                  aria-label="Show navigation menu"
+                  type="button"
+                >
+                  <svg
+                    class="ontario-icon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                    preserveAspectRatio="xMidYMid meet"
+                  >
+                    <use
+                      xlink:href="./ontario-design-system-dist-1.8.0/icons/ontario-icons-primary.svg#ontario-icon-menu"
+                      id="ontario-header-menu-icon"
+                    ></use>
+                  </svg>
+                  <span>Menu</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <nav class="ontario-navigation" id="ontario-navigation">
+          <button
+            class="ontario-header__menu-toggler ontario-header-button ontario-header-button--with-outline"
+            id="ontario-header-nav-toggler"
+            aria-controls="ontario-navigation"
+            aria-label="Hide navigation menu"
+          >
+            <svg
+              class="ontario-icon"
+              focusable="false"
+              viewBox="0 0 24 24"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <use xlink:href="#ontario-icon-close"></use>
+            </svg>
+            <span>Menu</span>
+          </button>
+          <div class="ontario-navigation__container">
+            <ul>
+              <li class="ontario-show-for-small-only">
+                <a href="#">Link 1</a>
+              </li>
+              <li class="ontario-show-for-small-only">
+                <a href="#">Link 2</a>
+              </li>
+              <li class="ontario-hide-for-large"><a href="#">Link 3</a></li>
+              <li class="ontario-hide-for-large"><a href="#">Link 4</a></li>
+              <li class="ontario-hide-for-large"><a href="#">Link 5</a></li>
+              <li><a href="#">Link 6</a></li>
+              <li><a href="#">Link 7</a></li>
+              <li><a href="#">Link 8</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </div>
-    <div class='ontario-overlay'></div>
-</div>
+    <div class="ontario-overlay"></div>
+  </div>
 
-
-
-<body>
+  <body>
     <h1 class="workflow-title">Approval Workflow</h1>
 
-    <div id="app">        
-        <div class="ontario-form-group fields">
-            <label class="ontario-label approver-name">
-                Name
-                <span class="ontario-label__flag">(required)</span>
-            </label>
-            <input class="ontario-input approver" type="text" id="nameInput">
+    <div id="app">
 
-            <label class="ontario-label">
-                Email
-                <span class="ontario-label__flag">(required)</span>
-            </label>
-            <input class="ontario-input approver" type="text" id="emailInput">
+      <ul
+        class="ontario-card__container ontario-card--cards-per-row-1 approver-info"
+        id="approvers"
+      ></ul>
 
-            <label class="ontario-label">
-                Role
-                <span class="ontario-label__flag">(required)</span>
-            </label>
-            <input class="ontario-input approver" type="text" id="roleInput">
+      <button
+        class="ontario-button ontario-button--primary approver"
+        id="addApproverBtn"
+      >
+        Add Additional Approver
+      </button>
 
-            <div class="ontario-form-group apprev">
-                <label class="ontario-label" for="apprev">
-                    Approver/Reviewer<span class="ontario-label__flag"> (required)</span>
-                </label>
-                <select required class="ontario-input ontario-dropdown approver" id="apprevInput">
-                    <option value="" disabled selected>Choose one</option>
-                    <option value="approver">Approver</option>
-                    <option value="reviewer">Reviewer</option>
-                </select>
-            </div>
+      <div class="ontario-form-group approver-form">
+        <label class="ontario-label approver-name">
+          Name
+          <span class="ontario-label__flag">(required)</span>
+        </label>
+        <input class="ontario-input approver" type="text" id="nameInput" />
 
-            <label class="ontario-label">
-                Delegate
-                <span class="ontario-label__flag">(optional)</span>
-            </label>
-            <input class="ontario-input approver" type="text" id="delegateInput">
-            
+        <label class="ontario-label email">
+          Email
+          <span class="ontario-label__flag">(required)</span>
+        </label>
+        <input class="ontario-input approver" type="text" id="emailInput" />
+
+        <label class="ontario-label">
+          Role
+          <span class="ontario-label__flag">(required)</span>
+        </label>
+        <input class="ontario-input approver" type="text" id="roleInput" />
+
+        <div class="ontario-form-group apprev">
+          <label class="ontario-label" for="apprev">
+            Approver/Reviewer<span class="ontario-label__flag">
+              (required)</span
+            >
+          </label>
+          <select
+            required
+            class="ontario-input ontario-dropdown approver"
+            id="apprevInput"
+          >
+            <option value="" disabled selected>Choose one</option>
+            <option value="Approver">Approver</option>
+            <option value="Reviewer">Reviewer</option>
+          </select>
         </div>
 
-        <button class="ontario-button ontario-button--primary approver" id="addApproverBtn">Add Approver</button>
-
-        <div id="approvers"></div>
-
+        <label class="ontario-label">
+          Delegate
+          <span class="ontario-label__flag">(optional)</span>
+        </label>
+        <input class="ontario-input approver" type="text" id="delegateInput" />
+      </div>
+      <button
+      class="ontario-button ontario-button--primary save-delegate"
+      id="saveDelegateBtn"
+    >
+      Save
+    </button>
     </div>
 
-<footer class='ontario-footer ontario-footer--default'>
-    <div class='ontario-row'>
-        <div class='ontario-columns ontario-small-12'>
-            <ul class='ontario-footer__links-container ontario-footer__links-container--inline'>
-                <li><a class='ontario-footer__link' href='https://www.ontario.ca/page/accessibility'>Accessibility</a></li>
-                <li><a class='ontario-footer__link' href='https://www.ontario.ca/page/privacy-statement'>Privacy</a></li>
-                <li><a class='ontario-footer__link' href='#'>Contact us</a></li>
-            </ul>
-            <div class='ontario-footer__copyright'>
-                <a class='ontario-footer__link' href='https://www.ontario.ca/page/copyright-information'>&copy; King's Printer for Ontario,
-                    <span class='ontario-nbsp'>2012&ndash;24</span></a>
-            </div>
+    <footer class="ontario-footer ontario-footer--default">
+      <div class="ontario-row">
+        <div class="ontario-columns ontario-small-12">
+          <ul
+            class="ontario-footer__links-container ontario-footer__links-container--inline"
+          >
+            <li>
+              <a
+                class="ontario-footer__link"
+                href="https://www.ontario.ca/page/accessibility"
+                >Accessibility</a
+              >
+            </li>
+            <li>
+              <a
+                class="ontario-footer__link"
+                href="https://www.ontario.ca/page/privacy-statement"
+                >Privacy</a
+              >
+            </li>
+            <li><a class="ontario-footer__link" href="#">Contact us</a></li>
+          </ul>
+          <div class="ontario-footer__copyright">
+            <a
+              class="ontario-footer__link"
+              href="https://www.ontario.ca/page/copyright-information"
+              >&copy; King's Printer for Ontario,
+              <span class="ontario-nbsp">2012&ndash;24</span></a
+            >
+          </div>
         </div>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const approversDiv = document.getElementById("approvers");
-    const addApproverBtn = document.getElementById("addApproverBtn");
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const approversDiv = document.getElementById("approvers");
+        const addApproverBtn = document.getElementById("addApproverBtn");
 
-    let approverCount = 0;
+        let head = null;
+        let tail = null;
 
-    addApproverBtn.addEventListener("click", function() {
+        const initialApprovers = [
+          {
+            name: "Director Name",
+            email: "director@ontario.ca",
+            role: "Director",
+            apprev: "Approver",
+            delegate: "None",
+          },
+          {
+            name: "Business Director Name",
+            email: "businessdirector@ontario.ca",
+            role: "Business Director",
+            apprev: "Approver",
+            delegate: "None",
+          },
+          {
+            name: "Work Chair Name",
+            email: "workchair@ontario.ca",
+            role: "Work Chair",
+            apprev: "Approver",
+            delegate: "None",
+          },
+          {
+            name: "Business Director Name",
+            email: "businessdirectoragain@ontario.ca",
+            role: "Business Director",
+            apprev: "Approver",
+            delegate: "None",
+          },
+        ];
 
-        const name = document.getElementById("nameInput").value;
-        const email = document.getElementById("emailInput").value;
-        const role = document.getElementById("roleInput").value;
-        const apprev = document.getElementById("apprevInput").value;
-        const delegate = document.getElementById("delegateInput").value;
-        
-        approverCount++;
-        const approverDiv = document.createElement("div");
-        approverDiv.className = "approver";
-        approverDiv.innerHTML = `
-            <div class="indicator">${approverCount}</div>
-
-            <div class="info">
-                <h6>Name: ${name}</h6>
-                <h6>Email: ${email}</h6>
-                <h6>Role: ${role}</h6>
-                <h6>Approver/Reviewer: ${apprev}</h6>
-                <h6>Delegate: ${delegate}</h6>
-            </div>
-
-            <div class="buttons">
-                <button class="moveUpBtn">Move Up</button>
-                <button class="moveDownBtn">Move Down</button>
-                <button class="removeBtn">Remove</button>
-            </div>
-        `;
-        approversDiv.appendChild(approverDiv);
-
-        document.getElementById("nameInput").value = '';
-        document.getElementById("emailInput").value = '';
-        document.getElementById("roleInput").value = '';
-        document.getElementById("apprevInput").value = '';
-        document.getElementById("delegateInput").value = '';
-
-        const buttons = approverDiv.querySelectorAll(".buttons button");
-        buttons.forEach(button => {
-            button.classList.add("ontario-button", "ontario-button--secondary", "inner-btn");
+        initialApprovers.forEach((approver) => {
+          addApproverCard(
+            approver.name,
+            approver.email,
+            approver.role,
+            approver.apprev,
+            approver.delegate,
+            false
+          );
         });
 
-        const removeBtn = approverDiv.querySelector(".removeBtn");
-        const moveUpBtn = approverDiv.querySelector(".moveUpBtn");
-        const moveDownBtn = approverDiv.querySelector(".moveDownBtn");
+        addApproverBtn.addEventListener("click", function () {
+          const name = document.getElementById("nameInput").value;
+          const email = document.getElementById("emailInput").value;
+          const role = document.getElementById("roleInput").value;
+          const apprev = document.getElementById("apprevInput").value;
+          const delegate = document.getElementById("delegateInput").value;
 
-        removeBtn.addEventListener("click", function() {
-            approversDiv.removeChild(approverDiv);
-            updateIndicators();
+          addApproverCard(name, email, role, apprev, delegate, true);
+
+          document.getElementById("nameInput").value = "";
+          document.getElementById("emailInput").value = "";
+          document.getElementById("roleInput").value = "";
+          document.getElementById("apprevInput").value = "";
+          document.getElementById("delegateInput").value = "";
         });
 
-        moveUpBtn.addEventListener("click", function() {
-            if (approverDiv.previousElementSibling) {
-                approversDiv.insertBefore(approverDiv, approverDiv.previousElementSibling);
-                updateIndicators();
-            }
-        });
+        function addApproverCard(
+          name,
+          email,
+          role,
+          apprev,
+          delegate,
+          isDynamic
+        ) {
+          const card = document.createElement("li");
+          card.className =
+            "ontario-card ontario-card--default ontario-card--position-vertical approver-info";
+          card.innerHTML = `
+                        <div class="ontario-card__text-container">
+                            <h2 class="ontario-card__heading approver-name">${name}</h2>
 
-        moveDownBtn.addEventListener("click", function() {
-            if (approverDiv.nextElementSibling) {
-                approversDiv.insertBefore(approverDiv.nextElementSibling, approverDiv);
-                updateIndicators();
-            }
-        });
+                            <div class="card-splitter">
+                                <div class="ontario-card__description details">
+                                    <p class="details">
+                                        <b>Name:</b> ${name} 
+                                        <br> 
+                                        <b>Email:</b> ${email} 
+                                        <br> 
+                                        <b>Role:</b> ${role} 
+                                        <br>
+                                        <b>Approver/Reviewer:</b> ${apprev}
+                                        <br>
+                                        <b>Delegate:</b> ${delegate}
+                                    </p>
+                                </div>
+                                <div class="card_buttons">
+                                    <div class="move_buttons_container">
+                                        ${
+                                          isDynamic
+                                            ? `
+                                            <button class="ontario-button ontario-button--secondary moveUpBtn">Move Up</button>
+                                            <button class="ontario-button ontario-button--secondary moveDownBtn">Move Down</button>`
+                                            : ""
+                                        }
+                                    </div>
+                                    <div class="move_buttons_container">
+                                        <button class="ontario-button ontario-button--secondary delegateBtn">Add Delegate</button>
+                                        ${
+                                          isDynamic
+                                            ? '<button class="ontario-button ontario-button--secondary removeBtn">Remove</button>'
+                                            : ""
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
 
-        updateIndicators();
-    });
+          const newNode = {
+            card: card,
+            prev: null,
+            next: null,
+          };
 
-    function updateIndicators() {
-    const approvers = document.querySelectorAll(".approver");
-    approverCount = 0;
-    approvers.forEach((approver, index) => {
-        if (approver.parentElement === approversDiv) {
-            const indicator = approver.querySelector(".indicator");
-            indicator.textContent = ++approverCount;
+          if (!head) {
+            head = newNode;
+            tail = newNode;
+          } else {
+            tail.next = newNode;
+            newNode.prev = tail;
+            tail = newNode;
+          }
+
+          approversDiv.appendChild(card);
+
+          const removeBtn = card.querySelector(".removeBtn");
+          const moveUpBtn = card.querySelector(".moveUpBtn");
+          const moveDownBtn = card.querySelector(".moveDownBtn");
+          const delegateBtn = card.querySelector(".delegateBtn");
+
+          if (isDynamic) {
+            removeBtn.addEventListener("click", function () {
+              removeApprover(newNode);
+            });
+            moveUpBtn.addEventListener("click", function () {
+              moveUp(newNode);
+            });
+            moveDownBtn.addEventListener("click", function () {
+              moveDown(newNode);
+            });
+          } else {
+            card.querySelector(".move_buttons_container").innerHTML = "";
+          }
+
+          delegateBtn.addEventListener("click", function () {
+            console.log("Add delegate button clicked for this dude: ", name);
+          });
+
+          updateIndicators();
         }
-    });
-}
 
-});
+        function removeApprover(node) {
+          if (node.prev) {
+            node.prev.next = node.next;
+          } else {
+            head = node.next;
+          }
+          if (node.next) {
+            node.next.prev = node.prev;
+          } else {
+            tail = node.prev;
+          }
 
-</script>
+          approversDiv.removeChild(node.card);
+          updateIndicators();
+        }
 
-</body>
+        function moveUp(node) {
+          if (node.prev) {
+            const prevNode = node.prev;
+            node.prev = prevNode.prev;
+            prevNode.next = node.next;
+            node.next = prevNode;
+            prevNode.prev = node;
+
+            if (node.prev) {
+              node.prev.next = node;
+            } else {
+              head = node;
+            }
+            if (prevNode.next) {
+              prevNode.next.prev = prevNode;
+            } else {
+              tail = prevNode;
+            }
+
+            approversDiv.insertBefore(
+              node.card,
+              node.card.previousElementSibling
+            );
+            updateIndicators();
+          }
+        }
+
+        function moveDown(node) {
+          if (node.next) {
+            const nextNode = node.next;
+            node.next = nextNode.next;
+            nextNode.prev = node.prev;
+            nextNode.next = node;
+            node.prev = nextNode;
+
+            if (node.next) {
+              node.next.prev = node;
+            } else {
+              tail = node;
+            }
+            if (nextNode.prev) {
+              nextNode.prev.next = nextNode;
+            } else {
+              head = nextNode;
+            }
+
+            approversDiv.insertBefore(nextNode.card, node.card);
+            updateIndicators();
+          }
+        }
+
+        function updateIndicators() {
+          let currentNode = head;
+          let index = 1;
+          while (currentNode) {
+            currentNode.card.querySelector(
+              ".ontario-card__heading"
+            ).textContent = `Approver ${index}`;
+            currentNode = currentNode.next;
+            index++;
+          }
+        }
+      });
+    </script>
+  </body>
 </html>
