@@ -124,7 +124,6 @@
     <h1 class="workflow-title">Approval Workflow</h1>
 
     <div id="app">
-
       <ul
         class="ontario-card__container ontario-card--cards-per-row-1 approver-info"
         id="approvers"
@@ -177,14 +176,27 @@
           Delegate
           <span class="ontario-label__flag">(optional)</span>
         </label>
-        <input class="ontario-input approver" type="text" id="delegateInput" />
+        <input
+          class="ontario-input delegateInput"
+          type="text"
+          id="delegateInput"
+        />
+
+        <div>
+          <button
+            class="ontario-button ontario-button--primary save-approver"
+            id="saveApproverBtn"
+          >
+            Save
+          </button>
+          <button
+            class="ontario-button ontario-button--secondary cancel-approver"
+            id="cancelApproverBtn"
+          >
+            Cancel
+          </button>
+        </div>
       </div>
-      <button
-      class="ontario-button ontario-button--primary save-delegate"
-      id="saveDelegateBtn"
-    >
-      Save
-    </button>
     </div>
 
     <footer class="ontario-footer ontario-footer--default">
@@ -225,11 +237,18 @@
       document.addEventListener("DOMContentLoaded", function () {
         const approversDiv = document.getElementById("approvers");
         const addApproverBtn = document.getElementById("addApproverBtn");
-
-        let head = null;
-        let tail = null;
+        const saveApproverBtn = document.getElementById("saveApproverBtn");
+        const cancelApproverBtn = document.getElementById("cancelApproverBtn");
+        const approverForm = document.querySelector(".approver-form");
 
         const initialApprovers = [
+          {
+            name: "Business Director Name",
+            email: "business.director@ontario.ca",
+            role: "Business Director",
+            apprev: "Approver",
+            delegate: "None",
+          },
           {
             name: "Director Name",
             email: "director@ontario.ca",
@@ -251,41 +270,51 @@
             apprev: "Approver",
             delegate: "None",
           },
-          {
-            name: "Business Director Name",
-            email: "business.director@ontario.ca",
-            role: "Business Director",
-            apprev: "Approver",
-            delegate: "None",
-          },
         ];
 
-        initialApprovers.forEach((approver) => {
+        initialApprovers.forEach((approver, index) => {
           addApproverCard(
             approver.name,
             approver.email,
             approver.role,
             approver.apprev,
             approver.delegate,
-            false
+            false,
+            index + 1
           );
         });
 
         addApproverBtn.addEventListener("click", function () {
-          const name = document.getElementById("nameInput").value;
-          const email = document.getElementById("emailInput").value;
-          const role = document.getElementById("roleInput").value;
-          const apprev = document.getElementById("apprevInput").value;
-          const delegate = document.getElementById("delegateInput").value;
+          approverForm.style.display = "block";
+        });
+
+        cancelApproverBtn.addEventListener("click", function () {
+          resetForm();
+          approverForm.style.display = "none";
+        });
+
+        saveApproverBtn.addEventListener("click", function () {
+          const name = document.getElementById("nameInput").value || "None";
+          const email = document.getElementById("emailInput").value || "None";
+          const role = document.getElementById("roleInput").value || "None";
+          const apprev = document.getElementById("apprevInput").value || "None";
+          const delegate =
+            document.getElementById("delegateInput").value || "None";
 
           addApproverCard(name, email, role, apprev, delegate, true);
 
+          resetForm();
+          approverForm.style.display = "none";
+          updateIndicators();
+        });
+
+        function resetForm() {
           document.getElementById("nameInput").value = "";
           document.getElementById("emailInput").value = "";
           document.getElementById("roleInput").value = "";
           document.getElementById("apprevInput").value = "";
           document.getElementById("delegateInput").value = "";
-        });
+        }
 
         function addApproverCard(
           name,
@@ -293,171 +322,207 @@
           role,
           apprev,
           delegate,
-          isDynamic
+          isDynamic,
+          index
         ) {
           const card = document.createElement("li");
           card.className =
             "ontario-card ontario-card--default ontario-card--position-vertical approver-info";
           card.innerHTML = `
-                        <div class="ontario-card__text-container">
-                            <h2 class="ontario-card__heading approver-name">${name}</h2>
+              <div class="ontario-card__text-container">
+                <div class="card-splitter">
+                  <h2 class="ontario-card__heading approver-name">${
+                    isDynamic ? "" : `Approver ${index}`
+                  }</h2>
+                  <div class="ontario-card__description details">
+                    <p class="details">
+                      <b>Name:</b> ${name} <br> 
+                      <b>Email:</b> ${email} <br> 
+                      <b>Role:</b> ${role} <br>
+                      <b>Approver/Reviewer:</b> ${apprev}<br>
+                      <b>Delegate:</b> ${delegate}
+                    </p>
+                  </div>
+                  <div class="card_buttons">
+                    <button class="ontario-button ontario-button--secondary delegateBtn">Edit Delegate</button>
+                    ${
+                      isDynamic
+                        ? `
+                    <button class="ontario-button ontario-button--secondary moveUpBtn">Move Up</button>
+                    <button class="ontario-button ontario-button--secondary moveDownBtn">Move Down</button>
+                    <button class="ontario-button ontario-button--secondary removeBtn">Remove</button>`
+                        : ""
+                    }
+                  </div>
+                </div>
+              </div>
+            `;
 
-                            <div class="card-splitter">
-                                <div class="ontario-card__description details">
-                                    <p class="details">
-                                        <b>Name:</b> ${name} 
-                                        <br> 
-                                        <b>Email:</b> ${email} 
-                                        <br> 
-                                        <b>Role:</b> ${role} 
-                                        <br>
-                                        <b>Approver/Reviewer:</b> ${apprev}
-                                        <br>
-                                        <b>Delegate:</b> ${delegate}
-                                    </p>
-                                </div>
-                                <div class="card_buttons">
-                                    <div class="move_buttons_container">
-                                        ${
-                                          isDynamic
-                                            ? `
-                                            <button class="ontario-button ontario-button--secondary moveUpBtn">Move Up</button>
-                                            <button class="ontario-button ontario-button--secondary moveDownBtn">Move Down</button>`
-                                            : ""
-                                        }
-                                    </div>
-                                    <div class="move_buttons_container">
-                                        <button class="ontario-button ontario-button--secondary delegateBtn">Add Delegate</button>
-                                        ${
-                                          isDynamic
-                                            ? '<button class="ontario-button ontario-button--secondary removeBtn">Remove</button>'
-                                            : ""
-                                        }
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    `;
+          const delegateButton = card.querySelector(".delegateBtn");
+          const cardButtons = card.querySelector(".card_buttons").children;
 
-          const newNode = {
-            card: card,
-            prev: null,
-            next: null,
-          };
+          delegateButton.addEventListener("click", function () {
+            for (let i = 0; i < cardButtons.length; i++) {
+              if (cardButtons[i] !== delegateButton) {
+                cardButtons[i].style.display = "none";
+              }
+            }
 
-          if (!head) {
-            head = newNode;
-            tail = newNode;
-          } else {
-            tail.next = newNode;
-            newNode.prev = tail;
-            tail = newNode;
-          }
+            const delegateInput = document.createElement("input");
+            delegateInput.className = "ontario-input delegate";
+            delegateInput.setAttribute("type", "text");
+            delegateInput.setAttribute("placeholder", "Enter delegate's name");
+            card.querySelector(".card_buttons").appendChild(delegateInput);
 
-          approversDiv.appendChild(card);
+            const saveBtn = document.createElement("button");
+            saveBtn.className =
+              "ontario-button ontario-button--primary save-delegate";
+            saveBtn.textContent = "Save";
+            card.querySelector(".card_buttons").appendChild(saveBtn);
 
-          const removeBtn = card.querySelector(".removeBtn");
-          const moveUpBtn = card.querySelector(".moveUpBtn");
-          const moveDownBtn = card.querySelector(".moveDownBtn");
-          const delegateBtn = card.querySelector(".delegateBtn");
+            const cancelBtn = document.createElement("button");
+            cancelBtn.className =
+              "ontario-button ontario-button--secondary cancel-delegate";
+            cancelBtn.textContent = "Cancel";
+            card.querySelector(".card_buttons").appendChild(cancelBtn);
 
-          if (isDynamic) {
-            removeBtn.addEventListener("click", function () {
-              removeApprover(newNode);
+            const clearBtn = document.createElement("button");
+            clearBtn.className =
+              "ontario-button ontario-button--secondary clear-delegate";
+            clearBtn.textContent = "Clear";
+            card.querySelector(".card_buttons").appendChild(clearBtn);
+
+            delegateButton.style.display = "none";
+
+            saveBtn.addEventListener("click", function () {
+              const newDelegateName = delegateInput.value || "None";
+              const detailsParagraph = card.querySelector(".details p.details");
+              const currentDetails = detailsParagraph.innerHTML;
+              const newDetails = currentDetails.replace(
+                new RegExp("Delegate:</b>.*"),
+                `Delegate:</b> ${newDelegateName}`
+              );
+              detailsParagraph.innerHTML = newDetails;
+
+              card.querySelector(".card_buttons").removeChild(delegateInput);
+              card.querySelector(".card_buttons").removeChild(saveBtn);
+              card.querySelector(".card_buttons").removeChild(cancelBtn);
+              card.querySelector(".card_buttons").removeChild(clearBtn);
+
+              for (let i = 0; i < cardButtons.length; i++) {
+                if (cardButtons[i] !== delegateButton) {
+                  cardButtons[i].style.display = "block";
+                }
+              }
+
+              delegateButton.style.display = "block";
+              updateIndicators();
             });
-            moveUpBtn.addEventListener("click", function () {
-              moveUp(newNode);
-            });
-            moveDownBtn.addEventListener("click", function () {
-              moveDown(newNode);
-            });
-          } else {
-            card.querySelector(".move_buttons_container").innerHTML = "";
-          }
 
-          delegateBtn.addEventListener("click", function () {
-            console.log("Add delegate button clicked for this dude: ", name);
+            cancelBtn.addEventListener("click", function () {
+              card.querySelector(".card_buttons").removeChild(delegateInput);
+              card.querySelector(".card_buttons").removeChild(saveBtn);
+              card.querySelector(".card_buttons").removeChild(cancelBtn);
+              card.querySelector(".card_buttons").removeChild(clearBtn);
+
+              for (let i = 0; i < cardButtons.length; i++) {
+                if (cardButtons[i] !== delegateButton) {
+                  cardButtons[i].style.display = "block";
+                }
+              }
+
+              delegateButton.style.display = "block";
+            });
+
+            clearBtn.addEventListener("click", function () {
+              const detailsParagraph = card.querySelector(".details p.details");
+              const currentDetails = detailsParagraph.innerHTML;
+              const newDetails = currentDetails.replace(
+                new RegExp("Delegate:</b>.*"),
+                `Delegate:</b> None`
+              );
+              detailsParagraph.innerHTML = newDetails;
+
+              card.querySelector(".card_buttons").removeChild(delegateInput);
+              card.querySelector(".card_buttons").removeChild(saveBtn);
+              card.querySelector(".card_buttons").removeChild(cancelBtn);
+              card.querySelector(".card_buttons").removeChild(clearBtn);
+
+              for (let i = 0; i < cardButtons.length; i++) {
+                if (cardButtons[i] !== delegateButton) {
+                  cardButtons[i].style.display = "block";
+                }
+              }
+
+              delegateButton.style.display = "block";
+              updateIndicators();
+            });
           });
 
+          if (isDynamic) {
+            const removeBtn = card.querySelector(".removeBtn");
+            const moveUpBtn = card.querySelector(".moveUpBtn");
+            const moveDownBtn = card.querySelector(".moveDownBtn");
+            removeBtn.addEventListener("click", function () {
+              removeApprover(card);
+              updateIndicators();
+            });
+            moveUpBtn.addEventListener("click", function () {
+              moveUp(card);
+              updateIndicators();
+            });
+            moveDownBtn.addEventListener("click", function () {
+              moveDown(card);
+              updateIndicators();
+            });
+          }
+
+          if (approversDiv.children.length === 0) {
+            approversDiv.appendChild(card);
+          } else {
+            const secondLastCard =
+              approversDiv.children[approversDiv.children.length - 1];
+            approversDiv.insertBefore(card, secondLastCard);
+          }
+
           updateIndicators();
         }
 
-        function removeApprover(node) {
-          if (node.prev) {
-            node.prev.next = node.next;
-          } else {
-            head = node.next;
-          }
-          if (node.next) {
-            node.next.prev = node.prev;
-          } else {
-            tail = node.prev;
-          }
-
-          approversDiv.removeChild(node.card);
+        function removeApprover(card) {
+          approversDiv.removeChild(card);
           updateIndicators();
         }
 
-        function moveUp(node) {
-          if (node.prev) {
-            const prevNode = node.prev;
-            node.prev = prevNode.prev;
-            prevNode.next = node.next;
-            node.next = prevNode;
-            prevNode.prev = node;
-
-            if (node.prev) {
-              node.prev.next = node;
-            } else {
-              head = node;
-            }
-            if (prevNode.next) {
-              prevNode.next.prev = prevNode;
-            } else {
-              tail = prevNode;
-            }
-
-            approversDiv.insertBefore(
-              node.card,
-              node.card.previousElementSibling
-            );
+        function moveUp(card) {
+          const prevCard = card.previousElementSibling;
+          if (prevCard) {
+            approversDiv.insertBefore(card, prevCard);
             updateIndicators();
           }
         }
 
-        function moveDown(node) {
-          if (node.next) {
-            const nextNode = node.next;
-            node.next = nextNode.next;
-            nextNode.prev = node.prev;
-            nextNode.next = node;
-            node.prev = nextNode;
-
-            if (node.next) {
-              node.next.prev = node;
-            } else {
-              tail = node;
-            }
-            if (nextNode.prev) {
-              nextNode.prev.next = nextNode;
-            } else {
-              head = nextNode;
-            }
-
-            approversDiv.insertBefore(nextNode.card, node.card);
+        function moveDown(card) {
+          const nextCard = card.nextElementSibling;
+          if (nextCard) {
+            approversDiv.insertBefore(nextCard, card);
             updateIndicators();
           }
         }
 
         function updateIndicators() {
-          let currentNode = head;
-          let index = 1;
-          while (currentNode) {
-            currentNode.card.querySelector(
-              ".ontario-card__heading"
-            ).textContent = `Approver ${index}`;
-            currentNode = currentNode.next;
-            index++;
+          const cards = approversDiv.children;
+          for (let i = 0; i < cards.length; i++) {
+            const heading = cards[i].querySelector(".ontario-card__heading");
+            heading.textContent = `Approver ${i + 1}`;
+
+            const moveDownBtn = cards[i].querySelector(".moveDownBtn");
+            if (moveDownBtn) {
+              if (i === cards.length - 2) {
+                moveDownBtn.style.display = "none";
+              } else {
+                moveDownBtn.style.display = "block";
+              }
+            }
           }
         }
       });
