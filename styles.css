@@ -265,107 +265,132 @@ a.weblink:visited{
 
 
 
-
-
-
-
-.ontario-card__container.approver-info{
-  margin-left: 40px;
-  margin-top: 40px;
+.workflow-title{
+  margin-bottom: 40px;
 }
 
-.ontario-card{
+.approver-form {
+  display: none; 
+}
+
+p.details {
+  font-size: 1rem;
+  margin: 0;
+  width: 100%;
+}
+
+.ontario-card__container.approver-info {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.ontario-card {
   width: 100%;
   max-width: 100%;
-}
-
-
-p.details{
-  font-size: 1rem;
-  margin-left: 0px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 300px;
-}
-
-
-.ontario-card__text-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
-.ontario-card__heading{
+  padding: 10px;
+  box-sizing: border-box;
   margin-left: 20px;
-  margin-top: 50px;
 }
 
+.ontario-card__text-container {
+  display: flex;
+  flex-direction: column;
+}
 
-.card-splitter{
+.ontario-card__heading.approver-name {
+  font-size: 1.2rem;
+  width: 20%;
+  height: 100px;
+  padding: 0px;
+  margin-left: 30px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.card-splitter {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center; 
+  width: 100%;
+}
+
+.ontario-card__description.details {
+  flex-grow: 1;
+  width: 45%; 
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  padding-left: 0px;
 }
 
 .card_buttons {
-  margin: 0;
-  margin-left: 50px;
   display: flex;
-  position: relative;
-  left: 0px;
-  margin-top: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  align-items: flex-start;
+  width: 100%; 
 }
 
-.move_buttons_container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.ontario-button.approver{
+  margin-bottom: 70px;
 }
 
-
-.ontario-button.moveDownBtn, 
-.ontario-button.moveUpBtn
-{
-
-  margin-top: 0;
-  margin-bottom: 20px;
-  margin-right: 25px;
-  margin-left: 0px;
-  font-size: 14px;
-
-}
-
-.ontario-button.moveDownBtn{
-  margin-bottom: 20px;
-
-}
-
+.ontario-button.save-delegate,
+.ontario-button.cancel-delegate,
+.ontario-button.delegateBtn,
 .ontario-button.removeBtn,
-.ontario-button.delegateBtn {
-  margin-top: 0;
-  margin-bottom: 20px;
-  margin-left: 0px;
-  margin-right: 25px;
+.ontario-button.moveUpBtn,
+.ontario-button.moveDownBtn,
+.ontario-button.clear-delegate
+{
   font-size: 14px;
+  margin-left: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
 }
 
+.ontario-input.delegate {
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  width: 80%;
+}
 
-.ontario-button.removeBtn{
+.ontario-button.removeBtn {
   color: red;
   border-color: red;
-  margin-bottom: 20px;
 }
 
-.ontario-button.removeBtn:hover{
+.ontario-button.removeBtn:hover {
   background-color: rgb(252, 218, 218);
 }
 
-.ontario-label.approver-name{
-  margin-top: 50px;
-}
-
-.ontario-card:active{
+.ontario-card:active {
   background-color: white;
 }
 
+@media (max-width: 600px) {
+  .card-splitter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
+  .card_buttons {
+    margin-left: 0;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
 
+  .ontario-button {
+    width: calc(50% - 4px);
+    margin: 2px 0;
+  }
+}
