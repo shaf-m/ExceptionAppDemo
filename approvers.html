@@ -432,6 +432,15 @@
               }
 
               delegateButton.style.display = "block";
+
+              const cards = approversDiv.children;
+              const isSecondLastCard = cards[cards.length - 2] === card;
+              if (isSecondLastCard) {
+                const moveDownBtn = card.querySelector(".moveDownBtn");
+                if (moveDownBtn) {
+                  moveDownBtn.style.display = "none";
+                }
+              }
             });
 
             clearBtn.addEventListener("click", function () {
